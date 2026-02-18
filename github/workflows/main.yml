@@ -1,0 +1,19 @@
+name: FB Auto Bot
+on:
+  workflow_dispatch: # Isse aap button dabakar bot chala payenge
+jobs:
+  run-bot:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.9'
+      - name: Install dependencies
+        run: pip install requests
+      - name: Run Script
+        env:
+          FB_TOKEN: ${{ secrets.FB_TOKEN }}
+          FB_COOKIE: ${{ secrets.FB_COOKIE }}
+        run: python main.py
