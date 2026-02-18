@@ -23,6 +23,6 @@ def send_message(post_id, message):
 
 # Example use (Aap isse loop mein bhi chala sakte hain)
 if __name__ == "__main__":
-    target_post = "YOUR_POST_ID_HERE" # Isse change karein
+    target_post = "100022256290881" # Isse change karein
     msg = "Hello from Auto Bot!"
     send_message(target_post, msg)
